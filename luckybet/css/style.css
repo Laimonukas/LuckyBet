@@ -1,0 +1,439 @@
+html,body{
+	background-color:#000;
+}
+
+#headerLogo{
+	left:20%;
+	margin:0 auto;
+	width:60%;
+	height:100px;
+	
+	
+}
+
+.lbLogo{
+	width:100%;
+	height:100%;
+}
+
+
+#stickyHeaderContainer{
+	position: -webkit-sticky; /* Safari */
+    position: sticky;
+	top:0px;
+	height:20px;
+	width:90%;
+	min-width:360px;
+	z-index:1;
+	
+	left:5%;
+	background-color:#000;
+	color:#fff;
+	border-radius:5px;
+	/* border: 2px solid #f00;  testing*/
+	
+	
+	
+	
+	text-align:center;
+	display:inline-block;
+	
+	
+}
+
+.stickyHeaderButton{
+	width:25%;
+	height:100%;
+	float:left;
+}
+
+.headerSelection{
+	transition:all 1s ease;
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;
+	margin:0 auto;
+	text-align:left;
+	width:5%;
+	height:100%;
+	border-radius:5px;
+	display:inline-block;
+	
+}
+.headerSelection:hover{
+	background-color:#00a8f3;
+	color:#000;
+	width:100%;
+	transition:all 1s ease;
+}
+
+
+#footerContainer{
+	left:0;
+    bottom:0;
+	width:100%;
+	background-color:#000;
+	text-align:left;
+	height:60px;
+	
+	
+}
+.footerContent{
+	float:left;
+	width:33%;
+	color:#fff;
+	
+}
+
+
+
+
+#loginContainer{
+	
+	Margin:25 auto;
+	width:25%;
+	height:25%;
+	background-color:#fff;
+	border-radius:5px;
+	position:relative;
+	
+	
+}
+#loginForm{
+	display:block;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width:90%;
+	left:5%;
+	text-align:center;
+	font-size:25px;
+	margin-bottom:25px;
+	
+}
+
+.textFieldA{
+	margin:5px 0px 5px 0px;
+	padding:5px 5px 5px 5px;
+	width:100%;
+	background-color:#ddd;
+	border:solid #000 2px;
+	border-radius:3px;
+	
+}
+
+.buttonA{
+	width:50%;
+	background-color:#fef200;
+	padding:5px 5px 5px 5px;
+	transition:all 0.5s ease;
+	border:solid #000 2px;
+	border-radius:3px;
+}
+.buttonA:hover{
+	
+	background-color:#00a8f3;
+	
+}
+
+
+.linkOnBlack{
+	color:#fff;
+	text-decoration:none;
+	border-radius:5px;
+	border:solid 1px #fff;
+}
+
+.whiteText{
+	color:#fff;
+}
+
+.linkOnBlack:hover{
+	color:#00a8f3;
+	border:solid 1px #00a8f3;
+}
+
+.linkTypeA{
+	display:block;
+	background-color:#00a8f3;
+	padding:5px 5px 5px 5px;
+	color:#000;
+	width:25%;
+	min-width:80px;
+	text-decoration:none;
+	border-radius:5px;
+	transition:all 0.5s ease;
+}
+.linkTypeA:hover{
+	
+	background-color:#fef200;
+	
+}
+
+
+#registerContainer{
+	
+	margin:0 auto;
+	margin-top:5px;
+	background-color:#fff;
+	text-align:left;
+	border-radius:5px;
+	width:90%;
+	padding:30px 10px 30px 10px;
+	
+	
+	
+}
+
+#adminSelectContainer{
+	margin:0 auto;
+	margin-top:25px;
+	height:18px;
+	background-color:#fff;
+	width:90%;
+	border-radius:5px;
+	text-align:center;
+	
+}
+
+.adminSelectButtons{
+	border-radius:5px;
+	display:inline-block;
+	float:left;
+	width:20%;
+	transition:all 0.5s;
+	
+}
+
+
+.adminSelectButtons:hover{
+	
+	background-color:#00a8f3;
+	cursor:hand;
+	
+}
+
+
+
+.adminSelectButtonsActive{
+	transition:all 0.5;
+	background-color:#00a8f3;
+	height:150%;
+}
+
+.middle{
+	width:90%;
+	margin:auto;
+}
+
+#adminVartotojai,#adminIvykiai,#adminStatymai,#adminReklama,#adminSpecialus{
+	
+	width:90%;
+	margin:auto;
+	overflow:auto;
+	background-color:#fff;
+	border-radius:5px;
+	margin-top:10px;
+	padding:30px 10px 30px 10px;
+	
+	
+}
+.hidden{
+	
+	display:none;
+}
+
+.normal{
+	display:block;
+}
+
+#betContainer{
+	
+	overflow:auto;
+	width:70%;
+	float:left;
+	height:1200px;
+	background-color:#fff;
+	border-radius:5px;
+	padding:30px 10px 30px 10px;
+	
+	
+	
+}
+
+.buttonTypeB{
+	width:90px;
+	height:20px;
+	background-color:#00a8f3;
+	border:solid 2px #000;
+	transition:all 0.5s;
+	
+}
+
+.buttonTypeB:hover{
+	background-color:#fef200;
+}
+
+.textFieldB{
+	width:90px;
+	padding:0px 5px 0px 5px;
+	height:20px;
+	background-color:#ddd;
+	border:solid 1px #000;
+	
+}
+
+#betslipContainer{
+	width:25%;
+	max-height:700px;
+	background-color:#fff;
+	overflow:auto;
+	border-radius:5px;
+	float:right;
+	/*position: -webkit-sticky; Safari */
+    position: sticky;
+	top:3%;
+	
+	
+	
+}
+#betslipContainer>div{
+	padding:30px 10px 30px 10px;
+	
+}
+
+
+#mainSelectContainer{
+	margin:0 auto;
+	margin-top:25px;
+	height:18px;
+	background-color:#000;
+	width:90%;
+	border-radius:5px;
+	text-align:center;
+	
+}
+
+.mainSelectButtons{
+	background-color:#fff;
+	border-radius:5px;
+	display:inline-block;
+	float:left;
+	width:33%;
+	transition:all 0.5s;
+	border:solid 2px #000;
+	
+}
+
+
+.mainSelectButtons:hover{
+	
+	background-color:#00a8f3;
+	cursor:hand;
+	
+}
+
+
+
+.mainSelectButtonsActive{
+	transition:all 0.5;
+	background-color:#00a8f3;
+	height:150%;
+}
+#mainBets,#mainEvents,#mainSport{
+	height:1200px;
+	margin-top:20px;
+	position:relative;
+}
+
+
+.advertImg{
+	border-radius:5px;
+	border:solid 1px #000;
+	width:90%;
+	height:90%;
+	margin-left:5%;
+}
+
+.advertShowDiv{
+	width:500px;
+	height:500px;
+}
+
+
+.advertSelectDiv{
+	width:500px;
+	height:500px;
+	float:left;
+}
+
+table{
+	width: 100%;
+	text-align:center;
+}
+
+.tableInput{
+	width:100%;
+	max-width:150px;
+	text-align:center;
+}
+
+
+.buttonTypeC{
+	background-color:#00a8f3;
+}
+
+input:read-only{
+	background-color:#ddd;
+}
+.green{
+	color:#0f0;
+}
+.red{
+	color:#f00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clearfix{
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
