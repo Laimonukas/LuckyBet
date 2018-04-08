@@ -1,185 +1,42 @@
 <body>
 	
 	<div id="betContainer">
-		Vykstančios varžybos:
-	
 		<div>
-		<form>
-				X vs. Y statyti:
-				<input type="text" class="textFieldB" name="betSum"> už:
-				<input type="submit" class="buttonTypeB" value="X">
-				<input type="submit" class="buttonTypeB" value="Y">
-				<input type="submit" class="buttonTypeB" value="Lygiosios"><br>
+		<?php
+			
+		//connection to sql
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
+		$serverName='localhost';
+		$username = "root";
+		$password = "usbw";
+		$dbName="luckybet";
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
+		$conn = mysqli_connect($serverName, $username, $password,$dbName);
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
+		if (!$conn) {
+			die("Prisijungti nepavyko: " . mysqli_connect_error());
+			mysqli_close($conn);
+			
+			echo '<a href="registracija.php" class="linkOnBlack">Grįžti atgal</a><br>';
+			return;
+		}
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
+		$sqlQuery="SELECT * FROM events WHERE endDate < now()";
+		$result = $conn->query($sqlQuery);
+
+		if ($result->num_rows > 0) {
+			echo "Dabar vykstantys ivykiai:";
+			echo $result->num_rows;
+		} else {
+			echo "Ivykių nėra";
+		}
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
 		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
-		<form>
-				X vs. Y statyti:
-				<input type="text" name="betSum">
-				<input type="submit" value="X">
-				<input type="submit" value="Y">
-				<input type="submit" value="Lygiosios"><br>
-		
-		</form>
+		?>
 		
 		</div>
 	
