@@ -393,8 +393,25 @@ input:read-only{
 	color:#f00;
 }
 
+.width50{
+	width:50%;
+}
 
+.width33{
+	width:33%;
+}
 
+.floatRight{
+	float:right;
+}
+
+.floatLeft{
+	float:left;
+}
+
+.textAlignCenter{
+	text-align:center;
+}
 
 
 

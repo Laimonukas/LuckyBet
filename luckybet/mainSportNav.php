@@ -1,17 +1,29 @@
 
 <body>
 <script src="js/mainSelect.js"></script>
+<?php
 
-<div id="mainSelectContainer">
-	<div id="mainSelectSport" class="mainSelectButtons mainSelectButtonsActive">Sportas</div>
-	
-	<div id="mainSelectEvents" class="mainSelectButtons">Ivykiai</div>
+
+	if(isset($_SESSION["logedIn"])){
+		echo '<div id="mainSelectContainer">';
+		echo '<div id="mainSelectSport" class="mainSelectButtons mainSelectButtonsActive">Sportas</div>';
+		echo '<div id="mainSelectEvents" class="mainSelectButtons">Ivykiai</div>';
+		echo '<div id="mainSelectBets" class="mainSelectButtons">Statymai</div>';
+		echo '</div>';
+		echo "<script src='js/placeBetForm.js'></script>";
 		
-	<div id="mainSelectBets" class="mainSelectButtons">Statymai</div>
-</div>
+	}
+		
+	
+?>
+
 
 <div id="mainSport" class="normal">
-	<?php include('statymas.php');?>
+	<div>
+	<?php
+		include('statymas.php');
+	?>
+	</div>
 	<?php include('betslip.php');?>
 </div>
 
