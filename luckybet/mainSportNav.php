@@ -10,6 +10,8 @@
 		echo '<div id="mainSelectEvents" class="mainSelectButtons">Ivykiai</div>';
 		echo '<div id="mainSelectBets" class="mainSelectButtons">Statymai</div>';
 		echo '</div>';
+		echo "<script src='js/placeBetForm.js'></script>";
+		
 	}
 		
 	
@@ -17,7 +19,11 @@
 
 
 <div id="mainSport" class="normal">
-	<?php include('statymas.php');?>
+	<div>
+	<?php
+		include('statymas.php');
+	?>
+	</div>
 	<?php include('betslip.php');?>
 </div>
 

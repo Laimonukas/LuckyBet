@@ -1,7 +1,5 @@
 <body>
-	
 	<div id="betContainer">
-		<div>
 		<?php
 			
 		//connection to sql
@@ -9,7 +7,6 @@
 		if (session_status() == PHP_SESSION_NONE) {
 			session_start();
 		}
-		
 		
 		
 		$serverName='localhost';
@@ -27,9 +24,12 @@
 			return;
 		}
 		
-		$sqlQuery="SELECT * FROM events WHERE endDate < now()";
+		$sqlQuery="SELECT * FROM events WHERE endDate > now()";
 		$result = $conn->query($sqlQuery);
-
+			
+		
+		
+		
 		if ($result->num_rows > 0) {
 			
 			if(!isset($_SESSION["logedIn"])){
@@ -44,6 +44,7 @@
 			if(isset($_SESSION["logedIn"])){
 				echo "<th>Kreditai</th>";
 				echo "<th>----</th>";
+				echo "<th>----</th>";
 			}
 			echo "</tr>";
 			
@@ -55,10 +56,10 @@
 				echo '<td>'.$row['coefY'].'</td>';
 				if(isset($_SESSION["logedIn"])){
 					echo '<td><input id="betValue'.$row['eventID'].'" class="tableInput" type="number" min="0" step="1" name="betValue" ></td>';
-					echo '<td><input  type="submit" id="betForm'.$row['eventID'].'"  value="Statyti!" class="buttonTypeC placeBet"></td>';
+					echo '<td><input  type="submit" id="betFormX'.$row['eventID'].'"  value="Statyti už X" class="buttonTypeC placeBet"></td>';
+					echo '<td><input  type="submit" id="betFormY'.$row['eventID'].'"  value="Statyti už Y" class="buttonTypeC placeBet"></td>';
 				
 				}
-				
 				echo "</tr>";
 			}
 			
@@ -72,13 +73,8 @@
 		
 		
 		
-		
+		mysqli_close($conn);
 		
 		?>
-		
-		</div>
-	
-	
-	
 	</div>
 </body>

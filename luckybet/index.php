@@ -24,8 +24,9 @@
 			if($_SESSION['isAdmin']==true){
 				header('Location: admin.php');
 			}else{
+				echo "<div>";
 				include('stickyHeaderLogedIn.php');
-				
+				echo "</div>";
 			}
 		}else{
 			include('stickyHeader.php');
