@@ -31,7 +31,9 @@ if(isset($_POST)){
 			mysqli_close($conn);
 			return;
 		}
-		
+		//set charset
+		//mysql_query("SET character_set_results = 'utf8mb4', character_set_client = 'utf8mb4', character_set_connection = 'utf8mb4', character_set_database = 'utf8mb4', character_set_server = 'utf8mb4'", $conn);
+		$conn->query("SET NAMES utf8");
 		//query to get current event data
 		$sqlQuery="SELECT eventId,clubX,clubY,coefX,coefY FROM events WHERE endDate > now() AND eventId=".$eventId;
 		$result = $conn->query($sqlQuery);
