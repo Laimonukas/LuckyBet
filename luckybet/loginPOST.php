@@ -30,6 +30,9 @@
 					echo '<a href="prisijungimas.php" class="linkOnBlack">Grįžti atgal</a><br>';
 					return;
 				}
+				//set charset
+				//mysql_query("SET character_set_results = 'utf8mb4', character_set_client = 'utf8mb4', character_set_connection = 'utf8mb4', character_set_database = 'utf8mb4', character_set_server = 'utf8mb4'", $conn);
+				$conn->query("SET NAMES utf8");
 				
 				$stmt = $conn->prepare("SELECT `userID`,`password`,`credits`,`role` FROM `users` WHERE `username` = (?)");
 				$stmt->bind_param('s', $name); // 's' specifies the variable type => 'string'
@@ -55,7 +58,7 @@
 					if($loginPassword==$result['password']){
 						$_SESSION["logedIn"] = TRUE;
 						$_SESSION["username"] = $name;
-						$_SESSION["credits"] = $result['credits'];
+						(float)$_SESSION["credits"] = $result['credits'];
 						$_SESSION["userID"]=$result['userID'];
 						
 						

@@ -10,8 +10,9 @@
 		if ($conn->connect_error) {
 			die("Klaida: " . $conn->connect_error);
 		} 
-		
-		
+		//set charset
+		//mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
+		$conn->query("SET NAMES utf8");
 		$sql = "SELECT * FROM advertisement";
 		$adResult = $conn->query($sql);
 		

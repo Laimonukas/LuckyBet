@@ -64,9 +64,10 @@
 			echo '<a href="registracija.php" class="linkOnBlack">Grįžti atgal</a><br>';
 			return;
 		}
+		//set char set to utf8
+		//mysql_query("SET character_set_results = 'utf8mb4', character_set_client = 'utf8mb4', character_set_connection = 'utf8mb4', character_set_database = 'utf8mb4', character_set_server = 'utf8mb4'", $conn);
+		$conn->query("SET NAMES utf8");
 		//prepared statements
-		
-		
 		$stmt = $conn->prepare("SELECT * FROM `users` WHERE `username` = (?)");
 		$stmt->bind_param('s', $name); // 's' specifies the variable type => 'string'
 		//set var

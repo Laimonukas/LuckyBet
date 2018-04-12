@@ -24,9 +24,12 @@ if(isset($_POST)){
 			echo '<a href="registracija.php" class="linkOnBlack">Grįžti atgal</a><br>';
 			return;
 		}
+		
+		//set chars
+		$conn->query("SET NAMES utf8");
+		
+		
 		//prepared statements
-		
-		
 		$stmt = $conn->prepare("INSERT INTO `events`(`clubX`,`clubY`,`coefX`,`coefY`,`betsForX`,`betsForY`,`startDate`,`endDate`) 
 								values ((?),(?),1.5,1.5,0,0,(?),(?))");
 		$stmt->bind_param('ssss', $clubX,$clubY,$startDate,$endDate);
