@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-   
 	var nameArray = ["eventId","clubX","clubY","koefX","koefY","betsForX","betsForY","startDate","endDate","winner"];
 	
 	function replaceValuesType2(nameArr,valArr,id){
@@ -36,18 +35,20 @@ $( document ).ready(function() {
 	}
 	
 	
-	
+
 	$('.adminEventTable :input').attr('readonly','readonly');
+	
+
+	
 	var valueArray=[];
 	
 	var lastClick=0;
 	
 	
 	$(".adminSelectButtons").click(function(){
-		
-		if(this.eventId=="adminSelectIvykiai"||this.eventId=="adminSelectStatymai"
-			||this.eventId=="adminSelectVartotojai"||this.eventId=="adminSelectReklama"
-			||this.eventId=="adminSelectSpecialus"){
+		if(this.id=="adminSelectIvykiai"||this.id=="adminSelectStatymai"
+			||this.id=="adminSelectVartotojai"||this.id=="adminSelectReklama"
+			||this.id=="adminSelectSpecialus"){
 				if(valueArray.length>0){
 					try{
 						fieldReplaceWithValue(lastClick,valueArray);
@@ -57,7 +58,6 @@ $( document ).ready(function() {
 						return;
 					}
 					catch(e){
-				
 					}
 					return;
 				}
@@ -67,8 +67,7 @@ $( document ).ready(function() {
 	})
 	
 	
-	$('.jsEventForm').click(function(){
-		
+	$('.jsEventForm').on("click",function(){
 		var oldValueArray=valueArray;
 		var clickedID = this.id;
 		clickedID = clickedID.replace("eventForm",'');

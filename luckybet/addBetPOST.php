@@ -59,9 +59,9 @@ if(isset($_POST)){
 		$time = $time->format('Y-m-d H:i:s');
 		
 		//creating bet
-		$stmt = $conn->prepare("INSERT INTO `bets`(`userID`,`eventID`,`betSum`,`betCoef`,`betPlannedWin`,`betOutcome`,`betTime`) 
-								values ((?),(?),(?),(?),(?),(?),(?))");
-		$stmt->bind_param('iidddss',$userId,$eventId,$betSum,$coef,$win,$club,$time);
+		$stmt = $conn->prepare("INSERT INTO `bets`(`userID`,`eventID`,`betSum`,`betCoef`,`betPlannedWin`,`betOutcome`,`selectedClub`,`betTime`) 
+								values ((?),(?),(?),(?),(?),(?),(?),(?))");
+		$stmt->bind_param('iidddsss',$userId,$eventId,$betSum,$coef,$win,$club,$selectedClub,$time);
 		
 		$win=$betSum*$coef;
 		$stmt->execute();
