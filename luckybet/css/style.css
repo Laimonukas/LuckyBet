@@ -413,6 +413,26 @@ input:read-only{
 	text-align:center;
 }
 
+.adminEventPage{
+	color:#00a8f3;
+	text-decoration:none;
+}
+
+.adminEventPage:hover{
+	text-decoration:underline;
+	cursor:hand;
+}
+
+.adminEventPageCount{
+	color:#00a8f3;
+	text-decoration:none;
+}
+
+.adminEventPageCount:hover{
+	text-decoration:underline;
+	cursor:hand;
+}
+
 
 
 
