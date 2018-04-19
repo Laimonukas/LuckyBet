@@ -10,19 +10,10 @@
 	<?php include('headerLogo.php'); ?>
 	
 	
+	
+	
 	<div id="loginContainer">
-	
-		<form action="loginPOST.php" method="post" id="loginForm">
-			Slapyvardis:<br>
-			<input class="textFieldA" type="text" name="loginUsername"><br>
-			Slaptažodis:<br>
-			<input class="textFieldA" type="password" name="loginPassword"><br>
-			<input class="buttonA" type="submit" value="Prisijungti">
-	
-		</form>
-		
-		
-		
+		<div>
 		<?php 
 			session_start();
 			//check sessions
@@ -37,16 +28,22 @@
 				if($_SESSION['registerSuccess']==true){
 					echo "Registracija sėkminga.<br>";
 				}else{
-					echo '<a class="linkTypeA" href="registracija.php">Registracija</a>';
+					echo '<a class="linkTypeA floatLeft textAlignCenter" href="registracija.php">Registracija</a>';
 				}
 			}else{
-				echo '<a class="linkTypeA" href="registracija.php">Registracija</a>';
+				echo '<a class="linkTypeA floatLeft textAlignCenter" href="registracija.php">Registracija</a>';
 			}
-		
-		
-		
 		?>
-		
+			<a class="linkTypeA floatLeft textAlignCenter" href="index.php">Pagrindinis</a>
+		</div>
+		<form action="loginPOST.php" method="post" id="loginForm">
+			Slapyvardis:<br>
+			<input class="textFieldA" type="text" name="loginUsername"><br>
+			Slaptažodis:<br>
+			<input class="textFieldA" type="password" name="loginPassword"><br>
+			<input class="buttonA" type="submit" value="Prisijungti">
+	
+		</form>
 	
 	
 	</div>

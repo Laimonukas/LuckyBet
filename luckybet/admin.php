@@ -5,6 +5,10 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/eventPagination.js"></script>
+	<script src="js/timer.js"></script>
+	<script src="js/adminSelect.js"></script>
+	<script src="js/jsEditUserForm.js"></script>
 </head>
 
 <body>
@@ -63,7 +67,7 @@
 	?>
 	
 	
-	<script src="js/adminSelect.js"></script>
+	
 	<div id="adminSelectContainer">
 		<div id="adminSelectIvykiai" class="adminSelectButtons">Ivykiai</div>
 	
@@ -87,7 +91,7 @@
 	<div id="adminContainer">
 		
 		<div id="adminIvykiai" class="hidden">
-			<script src="js/timer.js"></script>
+			
 			<div class="timer">
 			
 			
@@ -101,8 +105,16 @@
 						<input id="eventSubmit" type="submit" class="buttonTypeC" value="Pridėti" ><br>
 					</form>
 			</div>
-			Esami ivykiai:<br>
+			<br>
 			
+			
+			<div>
+				
+				Surasti ivykį:<br>
+				Paieškos dalis: <input class="eventSearchInput tableInput" type="text">
+				<input type="submit" class="eventSearchSubmit buttonTypeC" value="Ieškoti" ><br>
+			</div>
+			<br>
 			
 			<div class="adminEventTable">
 			<?php
@@ -190,7 +202,6 @@
 			?>
 			</div>
 			
-			<script src="js/eventPagination.js"></script>
 		
 		</div>
 		<div id="adminStatymai" class="hidden">
@@ -210,7 +221,7 @@
 		</div>
 		<div id="adminVartotojai" class="normal">
 		
-			<script src="js/jsEditUserForm.js"></script>
+			
 			<?php 
 			
 			echo "<table>";

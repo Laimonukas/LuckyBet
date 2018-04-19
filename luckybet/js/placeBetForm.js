@@ -21,24 +21,24 @@ $(document).ready(function(){
 				document.getElementById("betValue"+id).value = "";
 				$( ".red" ).remove();
 				$( ".green" ).remove();
-				$("#betslipContainer").prepend('<div class="green">'+data+'</div>');
+				$(".betslipMessages").prepend('<div class="green">'+data+'</div>');
 				setTimeout(function(){
 					$( ".red" ).remove();
 					$( ".green" ).remove();
 				},5000);
 							
 			}else{
-				console.log(data);
 				document.getElementById("betValue"+id).value = "";
 				$( ".red" ).remove();
 				$( ".green" ).remove();
-				$("#betslipContainer").prepend('<div class="red">Klaida:'+data+'</div>');
+				$(".betslipMessages").prepend('<div class="red">Klaida:'+data+'</div>');
 				setTimeout(function(){
 					$( ".red" ).remove();
 					$( ".green" ).remove();
 				},5000);
 			}
 			$( "#betContainer" ).parent().load("statymas.php");
+			$( ".betHistory" ).parent().load("betslip.php");
 			$( "#stickyHeaderContainer" ).parent().load("stickyHeaderLogedIn.php");
 		});
 		

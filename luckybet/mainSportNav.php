@@ -24,7 +24,12 @@
 		include('statymas.php');
 	?>
 	</div>
-	<?php include('betslip.php');?>
+	<div id="betslipContainer">
+		<div class="betslipMessages"></div>
+		<div>
+			<?php include('betslip.php');?>
+		</div>
+	</div>
 </div>
 
 <div id="mainEvents" class="hidden">Vykstantys ivykiai:</div>
