@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/eventPagination.js"></script>
-	<!--<script src="js/timer.js"></script>-->
+	<script src="js/timer.js"></script>
 	<script src="js/adminSelect.js"></script>
 	<script src="js/jsEditUserForm.js"></script>
 </head>
