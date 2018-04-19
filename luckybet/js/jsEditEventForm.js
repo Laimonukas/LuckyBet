@@ -34,11 +34,7 @@ $( document ).ready(function() {
 		$("#"+lastClick).val("Redaguoti");
 	}
 	
-	
-
 	$('.adminEventTable :input').attr('readonly','readonly');
-	
-
 	
 	var valueArray=[];
 	

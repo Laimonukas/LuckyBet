@@ -293,13 +293,14 @@ html,body{
 	/*position: -webkit-sticky; Safari */
     position: sticky;
 	top:3%;
+	right:2%;
 	
 	
 	
 }
 #betslipContainer>div{
-	padding:30px 10px 30px 10px;
-	
+	padding-top:10;
+	padding-left:20%;
 }
 
 
@@ -413,25 +414,28 @@ input:read-only{
 	text-align:center;
 }
 
-.adminEventPage{
+.buttonTypeD{
 	color:#00a8f3;
 	text-decoration:none;
 }
 
-.adminEventPage:hover{
+.buttonTypeD:hover{
 	text-decoration:underline;
 	cursor:hand;
 }
 
-.adminEventPageCount{
+.blue{
 	color:#00a8f3;
-	text-decoration:none;
 }
 
-.adminEventPageCount:hover{
-	text-decoration:underline;
-	cursor:hand;
+.orangeRed{
+	color:#e86c25;
 }
+
+.yellow{
+	color:#fef200;
+}
+
 
 
 
